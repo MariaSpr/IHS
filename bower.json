@@ -1,0 +1,21 @@
+{
+  "name": "IHS",
+  "authors": [
+    "Maria Siapera <mariasiapera@outlook.com>"
+  ],
+  "description": "university project assignment",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
