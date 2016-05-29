@@ -1,7 +1,8 @@
 {
   "name": "IHS",
   "authors": [
-    "Maria Siapera <mariasiapera@outlook.com>"
+    "Maria Siapera <mariasiapera@outlook.com>",
+    "Konstantinos Douloudis <kostisdoul@gmail.com>"
   ],
   "description": "university project assignment",
   "main": "index.html",
