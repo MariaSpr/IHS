@@ -28,10 +28,16 @@
         // page is now ready, initialize the calendar...
 
         $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today title',
+                right: 'month,agendaDay'
+            },
             // put your options and callbacks here
             dayClick: function() {
                 alert('a day has been clicked!');
             }
+
+
         });
 
     });
