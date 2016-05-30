@@ -61,11 +61,68 @@
                     <h4 class="modal-title">Schedule Appointment</h4>
                 </div>
                 <div class="modal-body">
-                    <p></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Schedule</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <div class="form">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-3">
+                                <label for="title">Event title:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="title" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="col-md-1">
+                                <label for="title">Date:</label>
+                            </div>
+                            <div class="col-md-5">
+                                <input type="date" name="title" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <label for="title">Time:</label>
+                            </div>
+                            <div class="col-md-5">
+                                <input type="date" name="title" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="col-md-3">
+                                <label for="title">Patient SSN:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" id="searchSSN" onclick="searchSSN()" name="title" class="form-control" placeholder="Click to search">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regionList">Select region:</label>
+                            <select class="form-control" id="regionList">
+                                <option>Attica</option>
+                                <option>Evoia</option>
+                                <option>Crete</option>
+                                <option>Thessaloniki</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hospList">Select Facility:</label>
+                            <select class="form-control" id="hospList">
+                                <option>Evaggelismos</option>
+                                <option>KY kapandritiou</option>
+                                <option>Aglaia Kyriakou</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="specList">Select Specialty:</label>
+                            <select class="form-control" id="hospList">
+                                <option>Kardiologiko</option>
+                                <option>Orthopediko</option>
+                                <option>Opthalmologiko</option>
+                            </select>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Schedule</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -139,6 +196,12 @@
 
 
         }); //end calendar
+
+
+        function searchSSN(){
+            $('#myModal').modal('toggle');
+            $('#PatientModal').modal('toggle');
+        }
 
     });
     </script>
