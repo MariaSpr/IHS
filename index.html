@@ -28,9 +28,13 @@
         // page is now ready, initialize the calendar...
 
         $('#calendar').fullCalendar({
+        	// businessHours:true,
+        	weekNumbers:true,
+        	// hiddenDays:[0],
+        	weekends:false,
             header: {
                 left: 'prev,next today title',
-                right: 'month,agendaDay'
+                right: 'month,basicWeek,basicDay'
             },
             // put your options and callbacks here
             dayClick: function() {
