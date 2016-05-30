@@ -1,4 +1,7 @@
 body {
 	padding-top: 50px;
-	background-color: #555;
+}
+
+navbar {
+	border-radius: 0;
 }
