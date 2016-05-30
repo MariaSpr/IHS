@@ -89,7 +89,7 @@
                                 <label for="title">Patient SSN:</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" id="searchSSN" onclick="searchSSN()" name="title" class="form-control" placeholder="Click to search">
+                                <input type="text" id="searchSSN"  name="title" class="form-control" placeholder="Click to search">
                             </div>
                         </div>
                         <div class="form-group">
@@ -197,12 +197,20 @@
 
         }); //end calendar
 
+        document.getElementById("searchSSN").onclick = function() {searchSSN();};
 
         function searchSSN(){
             $('#myModal').modal('toggle');
             $('#PatientModal').modal('toggle');
+            console.log("event fired");
         }
 
+        // var searchSSN = function(){
+        //     $('#myModal').modal('toggle');
+        //     $('#PatientModal').modal('toggle');
+        //     console.log("modal fired");
+        // };
+        
     });
     </script>
 </body>
