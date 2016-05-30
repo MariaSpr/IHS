@@ -20,6 +20,5 @@
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.6.3",
     "fullcalendar": "^2.7.2",
-    "sidr": "^2.2.1"
   }
 }
