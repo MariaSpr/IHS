@@ -5,3 +5,8 @@ body {
 navbar {
 	border-radius: 0;
 }
+
+.navIcon {
+	font-size: 20px;
+	padding-right: 10px;
+}
