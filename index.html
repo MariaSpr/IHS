@@ -91,9 +91,13 @@
                 center:"title",
                 right: 'month,basicWeek,basicDay'
             },
-            // put your options and callbacks here
-            dayClick: function() {
-                alert('a day has been clicked!');
+            
+            dayClick: function(date, jsEvent, view) {
+                
+                
+
+		        // change the day's background color just for fun
+		        // $(this).css('background-color', '#E6EFEE');
             }
 
 
