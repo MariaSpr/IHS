@@ -28,6 +28,10 @@ body#login {
 
 body#login h2 {
 	color:#fff;
+	font-size: 45px;
+}
+#logoIcon {
+	padding-right: 10px;
 }
 
 .form-signin {
