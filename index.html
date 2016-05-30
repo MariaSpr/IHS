@@ -5,44 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- style sheets -->
-    <link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
+    
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/fullcalendar/dist/fullcalendar.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/sidr/dist/stylesheets/jquery.sidr.light.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <title>Dashboard</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">I.H.S</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Appointments</a></li>
+                    <li><a href="#">Patients</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <p>testing the body padding</p>
     <div id="calendar"></div>
     <!-- scripts -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
     <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+    <script type="text/javascript" src=="bower_components/sidr/dist/jquery.sidr.min.js"></script>
     <script>
     /* Initializing Calendar */
 
     $(document).ready(function() {
 
-        // page is now ready, initialize the calendar...
-
-        $('#calendar').fullCalendar({
-        	// businessHours:true,
-        	weekNumbers:true,
-        	// hiddenDays:[0],
-        	weekends:false,
-            header: {
-                left: 'prev,next today title',
-                right: 'month,basicWeek,basicDay'
-            },
-            // put your options and callbacks here
-            dayClick: function() {
-                alert('a day has been clicked!');
-            }
 
 
-        });
+        // $('#calendar').fullCalendar({
+        // 	// businessHours:true,
+        // 	weekNumbers:true,
+        // 	// hiddenDays:[0],
+        // 	weekends:false,
+        //     header: {
+        //         left: 'prev,next today',
+        //         center:"title",
+        //         right: 'month,basicWeek,basicDay'
+        //     },
+        //     // put your options and callbacks here
+        //     dayClick: function() {
+        //         alert('a day has been clicked!');
+        //     }
+
+
+        // }); //end calendar
 
     });
     </script>

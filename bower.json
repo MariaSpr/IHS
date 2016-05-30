@@ -5,7 +5,7 @@
     "Konstantinos Douloudis <kostisdoul@gmail.com>"
   ],
   "description": "university project assignment",
-  "main": "index.html",
+  "main": "login.html",
   "license": "MIT",
   "homepage": "",
   "private": true,
@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.6.3",
-    "fullcalendar": "^2.7.2"
+    "fullcalendar": "^2.7.2",
+    "sidr": "^2.2.1"
   }
 }
