@@ -27,10 +27,10 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li>
                         <a href="index.html"> <span class="fa fa-calendar navIcon"></span>Appointments <span class="sr-only">(current)</span></a>
                     </li>
-                    <li><a href="patients.html"><span class="fa fa-users navIcon"></span>Patients</a></li>
+                    <li class="active"><a href="patients.html"><span class="fa fa-users navIcon"></span>Patients</a></li>
                     <li><a href="profile.html"><span class="fa fa-universal-access navIcon"></span>Profile</a></li>
                 </ul>
                 <form class="nav navbar-nav navbar-form" role="search">
@@ -52,227 +52,22 @@
             </div>
         </div>
     </nav>
-
-    <!-- Patient Modal -->
-    <div class="modal fade" style="overflow-y:auto;" id="patModal" tabindex="-1" role="dialog" aria-labelledby="patModal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="patModal">Patient Info</h4>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-                <div class="col-md-3 col-xs-3">
-                    <label for="searchpat">Search Patient:</label>
-                </div>
-                <div class="col-md-3 col-xs-1">
-                    <input id="searchpat" type="text" name="searchpat" placeholder="search ssn">
-                </div>
-                <div class="col-md-1 col-md-offset-1 col-xs-1 col-xs-offset-6">
-                    <button id="searchpatbtn" type="button" class="btn btn-primary btn-sm"><span id="searchIcon" class="fa fa-search"></span></button>
-                </div>
-            </div>
-            <hr>
-            <div class="row cusrow">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">SSN: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row cusrow">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Patient Name: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Patient Surname: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Father's Name: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Mother's Name: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Gender: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row cusrow">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Date of birth: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="date" name="name">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Home Address: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Phone Number: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-xs-4">
-                    <label for="name">Mobile Number: </label>
-                </div>
-                <div class="col-md-2 col-xs-4 col-xs-offset-4">
-                    <input class="inStyle" type="text" name="name">
-                </div>
-            </div>
-            <div class="row cusrow">
-                <div class="col-md-2"><label for="issues">Critical Issues:</label></div>
-                <div class="col-md-10">
-                    <textarea name="issues" id="issues" olaceholder="Critical Health Issues" cols="40" rows="10"></textarea>
-                </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button"  id="backBtn" class="btn btn-primary">Save</button>
-            <button type="button" id="saveBtn" class="btn btn-warning" data-dismiss="modal">Back</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-    <!--  Event Modal  -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Schedule Appointment</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form">
-                        <div class="form-group col-md-12">
-                            <div class="col-md-3">
-                                <label for="title">Event title:</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" name="title" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <div class="col-md-1">
-                                <label for="title">Date:</label>
-                            </div>
-                            <div class="col-md-5">
-                                <input type="date" name="title" class="form-control">
-                            </div>
-                            <div  class="col-md-1">
-                                <label for="regionList">Time:</label>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="form-control" id="regionList">
-                                <option>8.30</option>
-                                <option>9.00</option>
-                                <option>9.30</option>
-                                <option>10.00</option>
-                            </select>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <div class="col-md-3">
-                                <label for="title">Patient SSN:</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" id="searchSSN"  name="title" class="form-control" placeholder="Click to search">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="regionList">Select region:</label>
-                            <select class="form-control" id="regionList">
-                                <option>Attica</option>
-                                <option>Evoia</option>
-                                <option>Crete</option>
-                                <option>Thessaloniki</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="hospList">Select Facility:</label>
-                            <select class="form-control" id="hospList">
-                                <option>Evaggelismos</option>
-                                <option>KY kapandritiou</option>
-                                <option>Aglaia Kyriakou</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="specList">Select Specialty:</label>
-                            <select class="form-control" id="hospList">
-                                <option>Kardiologiko</option>
-                                <option>Orthopediko</option>
-                                <option>Opthalmologiko</option>
-                            </select>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Schedule</button>
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-
-
-    <!-- Calendar -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12" id="calDiv">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Calendar</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div id="calendar"></div>
-                    </div>
+            <div class="col-md-6">
+                <h1 class="page-header"><span id="pageheadIcon" class="fa fa-users"></span>Patients</h1>
+            </div>
+            <div class="col-md-6">
+                <div class="btn-group col-md-6" id='btn-group'>
+                  <button type="button" class="btn btn-default"><span class="fa fa-plus group"></span>New</button>
+                  <button type="button" class="btn btn-default"><span class="fa fa-pencil group"></span>Edit</button>
+                  <button type="button" class="btn btn-default"><span class="fa fa-times group"></span>Delete</button>
                 </div>
             </div>
         </div>
     </div>
+
+    
     <!-- scripts -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -288,62 +83,9 @@
 
 
 
-        $('#calendar').fullCalendar({
-            schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-            // businessHours:true,
-            contentHeight: 480,
-            weekNumbers: true,
-            hiddenDays: [0],
-            header: {
-                left: 'prev,next today',
-                center: "title",
-                right: 'month,basicWeek,basicDay'
-            },
+        
 
-            dayClick: function(date, jsEvent, view) {
-                console.log("dayclicked");
-                $('#myModal').modal('toggle');
-
-
-                // change the day's background color just for fun
-                // $(this).css('background-color', '#E6EFEE');
-            },
-
-            events: [{
-                        title: 'Niar Event that niars',
-                        start: '2016-05-20',
-                        description: 'Niar Event'
-                    }, {
-                        title: "Bur Event",
-                        start: "2016-05-31",
-                        description: "this is niar"
-                    }
-                    // more events here
-                ]
-                //, eventRender: function(event, element) {
-                //     element.qtip({
-                //         content: event.description
-                //     });
-                // }
-
-
-        }); //end calendar
-
-        document.getElementById("searchSSN").onclick = function() {searchSSN();};
-        document.getElementById("backBtn").onclick = function() {searchSSN();};
-        document.getElementById("saveBtn").onclick = function() {searchSSN();};
-
-        function searchSSN(){
-            $('#myModal').modal('toggle');
-            $('#patModal').modal('toggle');
-            console.log("event fired");
-        }
-
-        // var searchSSN = function(){
-        //     $('#myModal').modal('toggle');
-        //     $('#PatientModal').modal('toggle');
-        //     console.log("modal fired");
-        // };
+        
         
     });
     </script>

@@ -45,6 +45,21 @@ navbar {
 	margin-top: 10px;
 }
 
+
+/* PATIENT PAGE STYLES  */
+
+#pageheadIcon {
+  margin-right: 10px;
+}
+
+#btn-group {
+  margin-top: 40px;
+}
+
+.group {
+  margin-right: 5px;
+}
+
 /*  LOGIN PAGE STYLES */
 
 
