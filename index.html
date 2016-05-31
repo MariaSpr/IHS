@@ -302,24 +302,24 @@
                 // change the day's background color just for fun
                 // $(this).css('background-color', '#E6EFEE');
             },
+            editable:true,
 
             events: [{
                         title: 'Niar Event that niars',
                         start: '2016-05-20',
-                        description: 'Niar Event'
+                        description: 'This is the description'
                     }, {
                         title: "Bur Event",
                         start: "2016-05-31",
                         description: "this is niar"
                     }
                     // more events here
-                ]
-                //, eventRender: function(event, element) {
-                //     element.qtip({
-                //         content: event.description
-                //     });
-                // }
-
+                ],
+               eventMouseover: function(event, element) {
+                    $(this).tooltip({title:event.description, html: true, container: "body"});
+                    $(this).tooltip('show');
+      }
+                
 
         }); //end calendar
 
@@ -339,11 +339,6 @@
             console.log("event fired");
         }
 
-        // var searchSSN = function(){
-        //     $('#myModal').modal('toggle');
-        //     $('#PatientModal').modal('toggle');
-        //     console.log("modal fired");
-        // };
 
     });
     </script>
