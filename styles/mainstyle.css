@@ -34,6 +34,11 @@ navbar {
 	font-size: 16px;
 }
 
+#newBtn {
+  float:right;
+  margin-top: -20px;
+}
+
 
 .inStyle {
 	width:223px;
