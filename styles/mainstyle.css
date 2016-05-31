@@ -60,6 +60,19 @@ navbar {
   margin-right: 5px;
 }
 
+
+/*  PROFILE PAGE STYLES*/
+
+.headProf {
+  font-size: 25px;
+  color:#509CC8;
+}
+
+.contProf{
+  font-size: 25px;
+}
+
+
 /*  LOGIN PAGE STYLES */
 
 
