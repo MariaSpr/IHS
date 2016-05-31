@@ -17,6 +17,34 @@ navbar {
 }
 
 
+/* modal styles */
+
+#searchpat {
+	padding: 5px;
+}
+
+#searchpatbtn {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-left: -10px;
+	border-radius: 0;
+}
+
+#searchIcon {
+	font-size: 16px;
+}
+
+
+.inStyle {
+	width:223px;
+	padding: 5px;
+	margin-left:-148px;
+}
+
+.cusrow {
+	margin-top: 10px;
+}
+
 /*  LOGIN PAGE STYLES */
 
 

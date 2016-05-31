@@ -54,7 +54,7 @@
     </nav>
 
     <!-- Patient Modal -->
-    <div class="modal fade" id="patModal" tabindex="-1" role="dialog" aria-labelledby="patModal">
+    <div class="modal fade" style="overflow-y:auto;" id="patModal" tabindex="-1" role="dialog" aria-labelledby="patModal">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -62,7 +62,104 @@
             <h4 class="modal-title" id="patModal">Patient Info</h4>
           </div>
           <div class="modal-body">
-            <p>Testing niar</p>
+            <div class="row">
+                <div class="col-md-3 col-xs-3">
+                    <label for="searchpat">Search Patient:</label>
+                </div>
+                <div class="col-md-3 col-xs-1">
+                    <input id="searchpat" type="text" name="searchpat" placeholder="search ssn">
+                </div>
+                <div class="col-md-1 col-md-offset-1 col-xs-1 col-xs-offset-6">
+                    <button id="searchpatbtn" type="button" class="btn btn-primary btn-sm"><span id="searchIcon" class="fa fa-search"></span></button>
+                </div>
+            </div>
+            <hr>
+            <div class="row cusrow">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">SSN: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row cusrow">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Patient Name: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Patient Surname: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Father's Name: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Mother's Name: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Gender: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row cusrow">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Date of birth: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="date" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Home Address: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Phone Number: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-xs-4">
+                    <label for="name">Mobile Number: </label>
+                </div>
+                <div class="col-md-2 col-xs-4 col-xs-offset-4">
+                    <input class="inStyle" type="text" name="name">
+                </div>
+            </div>
+            <div class="row cusrow">
+                <div class="col-md-2"><label for="issues">Critical Issues:</label></div>
+                <div class="col-md-10">
+                    <textarea name="issues" id="issues" olaceholder="Critical Health Issues" cols="40" rows="10"></textarea>
+                </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button"  id="backBtn" class="btn btn-primary">Save</button>
