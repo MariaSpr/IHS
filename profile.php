@@ -1,3 +1,17 @@
+<?php include('session.php');
+
+if ($type == "patient") {
+// SQL Query To Fetch Complete Information Of Patient
+$ses_sql=mysqli_query($connection, "SELECT * FROM Patient WHERE SSN='$SSN'");
+}
+else if ($type == "doctor") {
+// SQL Query To Fetch Complete Information Of Doctor
+$ses_sql=mysqli_query($connection, "SELECT * FROM Doctor WHERE SSN='$SSN'");
+}
+$row = mysqli_fetch_assoc($ses_sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,29 +37,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><span class="fa fa-user-md navIcon"></span>I.H.S </a>
+                <a class="navbar-brand" href="index.php"><span class="fa fa-user-md navIcon"></span>I.H.S </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html"> <span class="fa fa-calendar navIcon"></span>Appointments <span class="sr-only">(current)</span></a>
+                        <a href="index.php"> <span class="fa fa-calendar navIcon"></span>Appointments <span class="sr-only">(current)</span></a>
                     </li>
-                    <li><a href="patients.html"><span class="fa fa-users navIcon"></span>Patients</a></li>
-                    <li class="active"><a href="profile.html"><span class="fa fa-universal-access navIcon"></span>Profile</a></li>
+                    <li><a href="patients.php" <?php if ($type == "patient") { echo ("style=\"display:none\""); }?>><span class="fa fa-users navIcon"></span>Patients</a></li>
+                    <li class="active"><a href="profile.php"><span class="fa fa-universal-access navIcon"></span>Profile</a></li>
                 </ul>
-                <form class="nav navbar-nav navbar-form" role="search">
+<!--                 <form class="nav navbar-nav navbar-form" role="search">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search...">
-                    </div>
+                    </div> -->
                     <!-- <button type="submit" class="btn btn-default">Submit</button> -->
-                </form>
+                <!-- </form> -->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-user navIcon"></span>Jane Joe <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-user navIcon"></span><?php echo $first_name . ' ' . $surname; ?><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="profile.html"><span class="fa fa-cog navIcon"></span> Profile</a></li>
+                            <li><a href="profile.php"><span class="fa fa-cog navIcon"></span> Profile</a></li>
                             <li class="divider"></li>
-                            <li><a href="login.html"><span class="fa fa-power-off navIcon"></span> Logout</a></li>
+                            <li><a href="logout.php"><span class="fa fa-power-off navIcon"></span> Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -63,7 +77,7 @@
                 <p class="headProf">SSN:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">1215105</p>
+                <p class="contProf"><?php echo($SSN); ?></p>
             </div>
         </div>
         <div class="row">
@@ -71,7 +85,7 @@
                 <p class="headProf">Name:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">Regina</p>
+                <p class="contProf"><?php echo($first_name); ?></p>
             </div>
         </div>
         <div class="row">
@@ -79,57 +93,82 @@
                 <p class="headProf">Surname:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">Mills</p>
+                <p class="contProf"><?php echo($surname); ?></p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" <?php if ($type == "patient") { echo ("style=\"display:none\""); }?>>
             <div class="col-md-3">
-                <p class="headProf">Father's Name:</p>
+                <p class="headProf">Specialty:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">Henry</p>
+                <p class="contProf"><?php echo($row['specialty']); ?></p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" <?php if ($type == "doctor") { echo ("style=\"display:none\""); }?>>
+            <div class="col-md-3">
+                <p class="headProf" >Father's Name:</p>
+            </div>
+            <div class="col-md-9">
+                <p class="contProf"><?php echo($row['fathers_name']); ?></p>
+            </div>
+        </div>
+        <div class="row" <?php if ($type == "doctor") { echo ("style=\"display:none\""); }?>>
             <div class="col-md-3">
                 <p class="headProf">Mother's Name:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">Cora</p>
+                <p class="contProf"><?php echo($row['mothers_name']); ?></p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" <?php if ($type == "doctor") { echo ("style=\"display:none\""); }?>>
             <div class="col-md-3">
                 <p class="headProf">Gender:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">Female</p>
+                <p class="contProf"><?php echo($row['sex']); ?></p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" <?php if ($type == "doctor") { echo ("style=\"display:none\""); }?>>
             <div class="col-md-3">
                 <p class="headProf">Home address:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">Storybrooke City hall</p>
+                <p class="contProf"><?php echo($row['residence']); ?></p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" <?php if ($type == "doctor") { echo ("style=\"display:none\""); }?>>
             <div class="col-md-3">
                 <p class="headProf">Phone Number:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">210-555-2125</p>
+                <p class="contProf"><?php echo($row['phone_home']); ?></p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" <?php if ($type == "doctor") { echo ("style=\"display:none\""); }?>>
             <div class="col-md-3">
                 <p class="headProf">Mobile Number:</p>
             </div>
             <div class="col-md-9">
-                <p class="contProf">690-090-9855</p>
+                <p class="contProf"><?php echo($row['phone_cell']); ?></p>
             </div>
         </div>
+        <div class="row" <?php if ($type == "doctor") { echo ("style=\"display:none\""); }?>>
+            <div class="col-md-3">
+                <p class="headProf">Work Number:</p>
+            </div>
+            <div class="col-md-9">
+                <p class="contProf"><?php echo($row['phone_work']); ?></p>
+            </div>
+        </div>
+         <div class="row" <?php if ($type == "doctor") { echo ("style=\"display:none\""); }?>>
+            <div class="col-md-3">
+                <p class="headProf">Critical issues:</p>
+            </div>
+            <div class="col-md-9">
+                <p class="contProf"><?php echo($row['health_info']); ?></p>
+            </div>
+        </div>
+
         
     </div>
     <!-- scripts -->
